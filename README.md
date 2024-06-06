@@ -4,7 +4,7 @@
 
 ### Challenge A: Array Reversal
 
-![Array Reversal Whiteboard](ArrayReversalWhiteboard.png)
+![Array Reversal Whiteboard](ArrayReversalWhiteboard.png) ()
 Reverse an array without using built-in methods in C#.
 
 ### Challenge B: Most Frequent Number
