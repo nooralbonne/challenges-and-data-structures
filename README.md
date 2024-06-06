@@ -4,7 +4,7 @@
 
 ### Challenge A: Array Reversal
 
-![Array Reversal Whiteboard](./ArrayReversalWhiteboard.png)
+[Link](https://github.com/nooralbonne/challenges-and-data-structures/blob/master/whiteboard-challenges/assests/ArrayReversalWhiteboard.png)
 ![Array Reversal challenge ](./ArrayReversalchallenge.PNG)
 Reverse an array without using built-in methods in C#.
 
