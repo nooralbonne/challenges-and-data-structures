@@ -1,35 +1,41 @@
 ﻿using System;
-public class GFG
+
+namespace whiteboard_challenges
 {
-    public static int mostFrequent(int[] arr, int n)
+    internal class Program
     {
-        int maxcount = 0;
-        int element_having_max_freq = 0;
-        for (int i = 0; i < n; i++)
+        static int[] ArrayReversal(int[] inputArray)
         {
-            int count = 0;
-            for (int j = 0; j < n; j++)
+            int startIndex = 0;
+            int endIndex = inputArray.Length - 1;
+
+            while (startIndex < endIndex)
             {
-                if (arr[i] == arr[j])
-                {
-                    count++;
-                }
+                inputArray[startIndex] = inputArray[endIndex];
+                inputArray[endIndex] = inputArray[startIndex];
+                startIndex++;
+                endIndex--;
             }
 
-            if (count > maxcount)
-            {
-                maxcount = count;
-                element_having_max_freq = arr[i];
-            }
+            return inputArray;
         }
 
-        return element_having_max_freq;
-    }
+        static void Main()
+        {
+            // Example inputs
+            int[] input1 = { 1, 2, 3, 4, 5 };
+            int[] input2 = { 42, 8, 15, 23, 42 };
+            int[] input3 = { 7, 9, 13, 25 };
 
-    public static void Main(String[] args)
-    {
-        int[] arr = { 1, 1, 2, 2, 3, 3, 3, 1, 1, 5, 5, 6, 7, 8, 2, 1, 1 };
-        int n = arr.Length;
-        Console.Write(mostFrequent(arr, n));
+            // Testing the function
+            int[] output1 = ArrayReversal(input1);
+            int[] output2 = ArrayReversal(input2);
+            int[] output3 = ArrayReversal(input3);
+
+            // Printing the results
+            Console.WriteLine($"Input: [1, 2, 3, 4, 5] Output: [{string.Join(", ", output1)}]");
+            Console.WriteLine($"Input: [42, 8, 15, 23, 42] Output: [{string.Join(", ", output2)}]");
+            Console.WriteLine($"Input: [7, 9, 13, 25] Output: [{string.Join(", ", output3)}]");
+        }
     }
 }
