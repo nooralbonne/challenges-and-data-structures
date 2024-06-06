@@ -22,7 +22,7 @@ namespace whiteboard_challenges
 
         static void Main()
         {
-            // Example inputs
+            // Example inputs ==
             int[] input1 = { 1, 2, 3, 4, 5 };
             int[] input2 = { 42, 8, 15, 23, 42 };
             int[] input3 = { 7, 9, 13, 25 };
