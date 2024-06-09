@@ -1,24 +1,14 @@
 # whiteboard-challenges
 
-### Challenge A: Array Reversal
-### code :
-[Link](https://github.com/nooralbonne/challenges-and-data-structures/blob/master/whiteboard-challenges/assests/ArrayReversalWhiteboard.png)
+## Challenge 01:
+#### Challenge A: Array Reversal
+![Array-Reversal-code](Array-Reversal-code.png)	
+![Array-Reversal-explanation](Array-Reversal-explanation.png)
 
-### sudo code with description :
-[Link](https://github.com/nooralbonne/challenges-and-data-structures/blob/master/whiteboard-challenges/assests/ArrayReversalchallenge.PNG)
+#### Challenge B: Most Frequent Number
+![Most-Frequent-Number-code](Most-Frequent-Number-code.png)	
+![Most-Frequent-Number-explanation](Most-Frequent-Number-explanation.png)
 
-Reverse an array without using built-in methods in C#.
-
-### Challenge B: Most Frequent Number
-### code :
-[Link](https://github.com/nooralbonne/challenges-and-data-structures/blob/master/whiteboard-challenges/assests/MostFrequentNumber.png)
-
-### sudo code with description :
-[Link](https://github.com/nooralbonne/challenges-and-data-structures/blob/master/whiteboard-challenges/assests/MostFrequentNumberchallenge.PNG)
-
-Find the number that appears the most times in an array, returning the first number if there are no duplicates or the first found in case of a tie.
-
-
-### Challenge 02: Maximum Value
-![Maximum-Value](C:\Users\Student\Desktop\whiteboard-challenges\whiteboard-challenges\assests\Maximum-Value-code.png)
-![Maximum-Value](C:\Users\Student\Desktop\whiteboard-challenges\whiteboard-challenges\assests\Maximum-Value.png)
+## Challenge 02: Maximum Value
+![Maximum-Value-code](Maximum-Value-code.png)	
+![Maximum-Value-explanation](Maximum-Value.png)
