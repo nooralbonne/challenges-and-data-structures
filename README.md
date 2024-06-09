@@ -20,5 +20,5 @@ Find the number that appears the most times in an array, returning the first num
 
 
 ### Challenge 02: Maximum Value
-![Maximum-Value](C:\Users\Student\Desktop\whiteboard-challenges\assets\Maximum-Value-code.png)
-![Maximum-Value](C:\Users\Student\Desktop\whiteboard-challenges\assets\Maximum-Value.png)
+![Maximum-Value](C:\Users\Student\Desktop\whiteboard-challenges\whiteboard-challenges\assests\Maximum-Value-code.png)
+![Maximum-Value](C:\Users\Student\Desktop\whiteboard-challenges\whiteboard-challenges\assests\Maximum-Value.png)
