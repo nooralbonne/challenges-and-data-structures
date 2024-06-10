@@ -3,21 +3,21 @@
 ## Challenge 01:
 #### Challenge A: Array Reversal
 Array-Reversal-code :
-[link](https://github.com/nooralbonne/challenges-and-data-structures/blob/master/Array-Reversal-code.png)	
+[link](https://github.com/nooralbonne/challenges-and-data-structures/blob/master/assets/Array-Reversal-code.png)	
 
 Array-Reversal-explanation :
-[link](https://github.com/nooralbonne/challenges-and-data-structures/blob/master/Array-Reversal-explanation.png)
+[link](https://github.com/nooralbonne/challenges-and-data-structures/blob/master/assets/Array-Reversal-explanation.png)
 
 #### Challenge B: Most Frequent Number
 Most-Frequent-Number-code :
-[link](https://github.com/nooralbonne/challenges-and-data-structures/blob/master/Most-Frequent-Number-code.png)	
+[link](https://github.com/nooralbonne/challenges-and-data-structures/blob/master/assets/Most-Frequent-Number-code.png)	
 
 Most-Frequent-Number-explanation :
-[link](https://github.com/nooralbonne/challenges-and-data-structures/blob/master/Most-Frequent-Number-explanation.png)
+[link](https://github.com/nooralbonne/challenges-and-data-structures/blob/master/assets/Most-Frequent-Number-explanation.png)
 
 ## Challenge 02: Maximum Value
 Maximum-Value-code :
-[link](https://github.com/nooralbonne/challenges-and-data-structures/blob/master/Maximum-Value-code.png)	
+[link](https://github.com/nooralbonne/challenges-and-data-structures/blob/master/assets/Maximum-Value-code.png)	
 
 Maximum-Value-explanation :
-[link](https://github.com/nooralbonne/challenges-and-data-structures/blob/master/Maximum-Value.png)
+[link](https://github.com/nooralbonne/challenges-and-data-structures/blob/master/assets/Maximum-Value.png)
