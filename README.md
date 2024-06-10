@@ -2,10 +2,10 @@
 
 ## Challenge 01:
 #### Challenge A: Array Reversal
-![Array-Reversal-code](Array-Reversal-code.png)	
+Array-Reversal-code :
 [link](https://github.com/nooralbonne/challenges-and-data-structures/blob/master/Array-Reversal-code.png)	
-
-![Array-Reversal-explanation](Array-Reversal-explanation.png)
+Array-Reversal-explanation :
+[link](https://github.com/nooralbonne/challenges-and-data-structures/blob/master/Array-Reversal-explanation.png)
 
 #### Challenge B: Most Frequent Number
 ![Most-Frequent-Number-code](Most-Frequent-Number-code.png)	
