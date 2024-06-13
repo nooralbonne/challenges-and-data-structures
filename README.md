@@ -1,6 +1,3 @@
-
-<<<<<<< Maximum-Value
-=======
 # whiteboard-challenges
 
 ## Challenge 01:
@@ -18,15 +15,13 @@ Most-Frequent-Number-code :
 Most-Frequent-Number-explanation :
 [link](https://github.com/nooralbonne/challenges-and-data-structures/blob/master/assets/Most-Frequent-Number-explanation.png)
 
->>>>>>> master
 ## Challenge 02: Maximum Value
 Maximum-Value-code :
 [link](https://github.com/nooralbonne/challenges-and-data-structures/blob/master/assets/Maximum-Value-code.png)	
 
 Maximum-Value-explanation :
 [link](https://github.com/nooralbonne/challenges-and-data-structures/blob/master/assets/Maximum-Value.png)
-<<<<<<< Maximum-Value
-=======
+
 
 ## Challenge 03: Remove Middle Value from Array
 Remove-Middle-Value-code :
@@ -34,4 +29,3 @@ Remove-Middle-Value-code :
 
 Maximum-Value-explanation :
 [link](https://github.com/nooralbonne/challenges-and-data-structures/blob/master/assets/Remove-Middle-Value-explanation.jpg)
->>>>>>> master
