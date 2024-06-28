@@ -36,7 +36,7 @@ Insert-Middle-Value-code :
 Insert-Middle-Value-explanation :
 [link](https://github.com/nooralbonne/challenges-and-data-structures/blob/master/assets/Middle-Value-Explanation.jpg)
 
-## Challenge 04: Find-Duplicates
+## Challenge 05: Find-Duplicates
 Find-Duplicates-Code :
 [link](https://github.com/nooralbonne/challenges-and-data-structures/blob/Find-Duplicates/assets/Find-Duplicates-Code.jpg)	
 
