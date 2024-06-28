@@ -24,10 +24,23 @@ Maximum-Value-explanation :
 
 ## Challenge 03: Remove Middle Value from Array
 Remove-Middle-Value-code :
-[link]()	
+[link](https://github.com/nooralbonne/challenges-and-data-structures/blob/master/assets/Remove-Middle-Value-code.png)	
 
-Maximum-Value-explanation :
-[link]()
+Remove-Middle-Value-explanation :
+[link](https://github.com/nooralbonne/challenges-and-data-structures/blob/master/assets/Remove-Middle-Value-explanation.jpg)
+
+## Challenge 04: Insert-Middle-Value
+Insert-Middle-Value-code :
+[link](https://github.com/nooralbonne/challenges-and-data-structures/blob/master/assets/Middle-Value-code.jpg)	
+
+Insert-Middle-Value-explanation :
+[link](https://github.com/nooralbonne/challenges-and-data-structures/blob/master/assets/Middle-Value-Explanation.jpg)
+
+## Challenge 04: Find-Duplicates
+Find-Duplicates-Code :
+[link](https://github.com/nooralbonne/challenges-and-data-structures/blob/Find-Duplicates/assets/Find-Duplicates-Code.jpg)	
+
+Find-Duplicates-Explanation :
+[link](https://github.com/nooralbonne/challenges-and-data-structures/blob/Find-Duplicates/assets/Find-Duplicates-Code.jpg)
 
 
-///////////////////////////
