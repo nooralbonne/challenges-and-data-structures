@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "whiteboard-challenges", "wh
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test-whiteboard-challenges", "..\Test-whiteboard-challenges\Test-whiteboard-challenges.csproj", "{3B36639E-D9EF-45D7-8EE6-5124488F9475}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "assets", "assets", "{1AA72D5F-0A94-4619-8583-96925A4313CC}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
