@@ -14,3 +14,10 @@ Most-Frequent-Number-code :
 
 Most-Frequent-Number-explanation :
 [link](https://github.com/nooralbonne/challenges-and-data-structures1/blob/whiteboard-challenges/whiteboard-challenges/assets/Most-Frequent-Number-explanation.png)
+
+## Challenge 02: Maximum Value
+Maximum-Value-code :
+[link](https://github.com/nooralbonne/challenges-and-data-structures1/blob/Maximum-Value/whiteboard-challenges/assets/Maximum-Value-code.png)	
+
+Maximum-Value-explanation :
+[link](https://github.com/nooralbonne/challenges-and-data-structures1/blob/Maximum-Value/whiteboard-challenges/assets/Maximum-Value-explanation.png)
