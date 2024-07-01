@@ -29,3 +29,9 @@ Remove-Middle-Value-code :
 Remove-Middle-Value-explanation :
 [link](https://github.com/nooralbonne/challenges-and-data-structures1/blob/Remove-Middle-Value/whiteboard-challenges/assets/Remove-Middle-Value-explanation.jpg)
 
+## Challenge 04: Insert-Middle-Value
+Insert-Middle-Value-code :
+[link](https://github.com/nooralbonne/challenges-and-data-structures1/blob/Insert-Middle-Value/whiteboard-challenges/assets/Insert-Middle-Value-code.jpg)	
+
+Insert-Middle-Value-explanation :
+[link](https://github.com/nooralbonne/challenges-and-data-structures1/blob/Insert-Middle-Value/whiteboard-challenges/assets/Insert-Middle-Value-Explanation.jpg)
