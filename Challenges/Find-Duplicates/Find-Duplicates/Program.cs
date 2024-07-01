@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace whiteboard_challenges.Challenges.Find_Duplicates
+﻿namespace Find_Duplicates
 {
     public class Program
     {
@@ -55,3 +52,4 @@ namespace whiteboard_challenges.Challenges.Find_Duplicates
         }
     }
 }
+

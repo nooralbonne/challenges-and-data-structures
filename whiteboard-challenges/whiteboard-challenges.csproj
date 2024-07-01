@@ -12,4 +12,8 @@
 		<StartupObject>Namespace.ClassName</StartupObject>
 	</PropertyGroup>
 
+	<ItemGroup>
+	  <Folder Include="Challenges\" />
+	</ItemGroup>
+
 </Project>
