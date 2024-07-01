@@ -21,3 +21,11 @@ Maximum-Value-code :
 
 Maximum-Value-explanation :
 [link](https://github.com/nooralbonne/challenges-and-data-structures1/blob/Maximum-Value/whiteboard-challenges/assets/Maximum-Value-explanation.png)
+
+## Challenge 03: Remove Middle Value from Array
+Remove-Middle-Value-code :
+[link](https://github.com/nooralbonne/challenges-and-data-structures1/blob/Remove-Middle-Value/whiteboard-challenges/assets/Remove-Middle-Value-code.png)	
+
+Remove-Middle-Value-explanation :
+[link](https://github.com/nooralbonne/challenges-and-data-structures1/blob/Remove-Middle-Value/whiteboard-challenges/assets/Remove-Middle-Value-explanation.jpg)
+
