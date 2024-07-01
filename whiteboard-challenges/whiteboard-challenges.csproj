@@ -12,8 +12,4 @@
 		<StartupObject>Namespace.ClassName</StartupObject>
 	</PropertyGroup>
 
-	<ItemGroup>
-	  <None Include="Challenges\Find-Duplicates\Find-Duplicates.csproj" />
-	</ItemGroup>
-
 </Project>
