@@ -1,7 +1,7 @@
 ﻿# Table of Contents
-[Linked-List-Code](Data-Structures/LinkedList/LinkedList/LinkedList/Linked-List.jpg)
+[Linked-List-Code](https://github.com/nooralbonne/challenges-and-data-structures1/blob/master/Data-Structures/LinkedList/LinkedList/LinkedList/Linked-List.jpg)
 
-[Linked-List-Explanation](Data-Structures/LinkedList/LinkedList/LinkedList/Linked-List-Explanation.jpg)
+[Linked-List-Explanation](https://github.com/nooralbonne/challenges-and-data-structures1/blob/master/Data-Structures/LinkedList/LinkedList/LinkedList/Linked-List-Explanation.jpg)
 
 # LinkedList Implementation
 
