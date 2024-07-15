@@ -46,5 +46,61 @@ namespace LinkedList.Tests
             // Assert
             Assert.Equal(expectedOutput, actualOutput);
         }
+
+        [Fact]
+        public void RemoveDuplicates_ShouldKeepUniqueNodes_WhenNoDuplicates()
+        {
+            // Arrange
+            LinkedList list = new LinkedList();
+            list.Add(1);
+            list.Add(2);
+            list.Add(3);
+
+            // Act
+            list.RemoveDuplicates();
+
+            // Assert
+            string expectedOutput = "1 -> 2 -> 3 -> Null";
+            Assert.Equal(expectedOutput, list.ToString());
+        }
+
+        [Fact]
+        public void RemoveDuplicates_ShouldRemoveDuplicates_KeepUniqueNodes()
+        {
+            // Arrange
+            LinkedList list = new LinkedList();
+            list.Add(1);
+            list.Add(2);
+            list.Add(2);
+            list.Add(3);
+            list.Add(3);
+            list.Add(4);
+
+            // Act
+            list.RemoveDuplicates();
+
+            // Assert
+            string expectedOutput = "1 -> 2 -> 3 -> 4 -> Null";
+            Assert.Equal(expectedOutput, list.ToString());
+        }
+
+        [Fact]
+        public void RemoveDuplicates_ShouldReduceToOneNode_WhenAllDuplicates()
+        {
+            // Arrange
+            LinkedList list = new LinkedList();
+            list.Add(5);
+            list.Add(5);
+            list.Add(5);
+            list.Add(5);
+
+            // Act
+            list.RemoveDuplicates();
+
+            // Assert
+            string expectedOutput = "5 -> Null";
+            Assert.Equal(expectedOutput, list.ToString());
+        }
     }
 }
+

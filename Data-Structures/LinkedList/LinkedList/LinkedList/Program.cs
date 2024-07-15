@@ -8,19 +8,22 @@
 
             // Add nodes
             list.Add(5);
-            list.Add(10);
             list.Add(20);
+            list.Add(20);
+            list.Add(10);
+            list.Add(5);
+            list.Add(10);
 
             // Print initial list
             Console.Write("Initial List: ");
-            list.PrintList(); // Output: 5 -> 10 -> 20 -> Null
+            list.PrintList(); // Output: 5 -> 20 -> 20 -> 10 -> 5 -> 10 -> Null
 
-            // Remove a node
-            list.Remove(10);
+            // Remove duplicates
+            list.RemoveDuplicates();
 
-            // Print list after removal
-            Console.Write("List after removing 10: ");
-            list.PrintList(); // Output: 5 -> 20 -> Null
+            // Print list after removing duplicates
+            Console.Write("List after removing duplicates: ");
+            list.PrintList(); // Output: 5 -> 20 -> 10 -> Null
         }
     }
 }
