@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Text;
 
 namespace LinkedList
 {
@@ -65,6 +65,27 @@ namespace LinkedList
             current.Next = current.Next.Next;
         }
 
+        public void RemoveDuplicates()
+        {
+            Node current = head;
+            while (current != null)
+            {
+                Node runner = current;
+                while (runner.Next != null)
+                {
+                    if (runner.Next.Data == current.Data)
+                    {
+                        runner.Next = runner.Next.Next;
+                    }
+                    else
+                    {
+                        runner = runner.Next;
+                    }
+                }
+                current = current.Next;
+            }
+        }
+
         public void PrintList()
         {
             Node current = head;
@@ -86,6 +107,19 @@ namespace LinkedList
                 current = current.Next;
             }
             return length;
+        }
+
+        public override string ToString()
+        {
+            Node current = head;
+            StringBuilder result = new StringBuilder();
+            while (current != null)
+            {
+                result.Append($"{current.Data} -> ");
+                current = current.Next;
+            }
+            result.Append("Null");
+            return result.ToString();
         }
     }
 }
