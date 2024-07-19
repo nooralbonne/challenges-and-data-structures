@@ -101,6 +101,56 @@ namespace LinkedList.Tests
             string expectedOutput = "5 -> Null";
             Assert.Equal(expectedOutput, list.ToString());
         }
+
+        [Fact]
+        public void Merge_WhenOneListIsEmpty_ShouldReturnTheOtherList()
+        {
+            LinkedList list1 = new LinkedList();
+            LinkedList list2 = new LinkedList();
+            list2.Add(1);
+
+            LinkedList mergedList = new LinkedList();
+            mergedList = mergedList.MergeSortedLists(list1, list2);
+
+            Assert.NotNull(mergedList.head);
+            Assert.Equal(1, mergedList.head.Data);
+        }
+
+        [Fact]
+        public void Merge_WhenBothListsAreEmpty_ShouldReturnEmptyList()
+        {
+            LinkedList list1 = new LinkedList();
+            LinkedList list2 = new LinkedList();
+
+            LinkedList mergedList = new LinkedList();
+            mergedList = mergedList.MergeSortedLists(list1, list2);
+
+            Assert.Null(mergedList.head);
+        }
+
+        [Fact]
+        public void Merge_WhenListsAreSorted_ShouldReturnMergedSortedList()
+        {
+            LinkedList list1 = new LinkedList();
+            list1.Add(5);
+            list1.Add(10);
+            list1.Add(15);
+
+            LinkedList list2 = new LinkedList();
+            list2.Add(2);
+            list2.Add(3);
+            list2.Add(20);
+
+            LinkedList mergedList = new LinkedList();
+            mergedList = mergedList.MergeSortedLists(list1, list2);
+
+            Assert.Equal(2, mergedList.head.Data);
+            Assert.Equal(3, mergedList.head.Next.Data);
+            Assert.Equal(5, mergedList.head.Next.Next.Data);
+            Assert.Equal(10, mergedList.head.Next.Next.Next.Data);
+            Assert.Equal(15, mergedList.head.Next.Next.Next.Next.Data);
+            Assert.Equal(20, mergedList.head.Next.Next.Next.Next.Next.Data);
+        }
     }
 }
 

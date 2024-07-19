@@ -1,10 +1,11 @@
-﻿using System.Text;
+﻿using System;
+using System.Text;
 
 namespace LinkedList
 {
     public class LinkedList
     {
-        private Node head;
+        public Node head;
 
         public void Add(int data)
         {
@@ -24,26 +25,10 @@ namespace LinkedList
             }
         }
 
-        public bool Contains(int data)
-        {
-            Node current = head;
-            while (current != null)
-            {
-                if (current.Data == data)
-                {
-                    return true;
-                }
-                current = current.Next;
-            }
-            return false;
-        }
-
         public void Remove(int data)
         {
             if (head == null)
-            {
-                throw new InvalidOperationException("List is empty.");
-            }
+                return;
 
             if (head.Data == data)
             {
@@ -52,17 +37,15 @@ namespace LinkedList
             }
 
             Node current = head;
-            while (current.Next != null && current.Next.Data != data)
+            while (current.Next != null)
             {
+                if (current.Next.Data == data)
+                {
+                    current.Next = current.Next.Next;
+                    return;
+                }
                 current = current.Next;
             }
-
-            if (current.Next == null)
-            {
-                throw new InvalidOperationException("Node not found.");
-            }
-
-            current.Next = current.Next.Next;
         }
 
         public void RemoveDuplicates()
@@ -97,6 +80,19 @@ namespace LinkedList
             Console.WriteLine("Null");
         }
 
+        public override string ToString()
+        {
+            Node current = head;
+            StringBuilder result = new StringBuilder();
+            while (current != null)
+            {
+                result.Append($"{current.Data} -> ");
+                current = current.Next;
+            }
+            result.Append("Null");
+            return result.ToString();
+        }
+
         public int GetLength()
         {
             int length = 0;
@@ -109,17 +105,46 @@ namespace LinkedList
             return length;
         }
 
-        public override string ToString()
+        public LinkedList MergeSortedLists(LinkedList list1, LinkedList list2)
         {
-            Node current = head;
-            StringBuilder result = new StringBuilder();
-            while (current != null)
+            Node dummy = new Node(0);
+            Node tail = dummy;
+
+            Node current1 = list1.head;
+            Node current2 = list2.head;
+
+            while (current1 != null && current2 != null)
             {
-                result.Append($"{current.Data} -> ");
-                current = current.Next;
+                if (current1.Data <= current2.Data)
+                {
+                    tail.Next = new Node(current1.Data);
+                    current1 = current1.Next;
+                }
+                else
+                {
+                    tail.Next = new Node(current2.Data);
+                    current2 = current2.Next;
+                }
+                tail = tail.Next;
             }
-            result.Append("Null");
-            return result.ToString();
+
+            while (current1 != null)
+            {
+                tail.Next = new Node(current1.Data);
+                current1 = current1.Next;
+                tail = tail.Next;
+            }
+
+            while (current2 != null)
+            {
+                tail.Next = new Node(current2.Data);
+                current2 = current2.Next;
+                tail = tail.Next;
+            }
+
+            LinkedList mergedList = new LinkedList();
+            mergedList.head = dummy.Next;
+            return mergedList;
         }
     }
 }
