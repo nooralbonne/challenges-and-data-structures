@@ -60,7 +60,7 @@ A visual representation of the stack and queue operations:
    - Continue until the queue is empty.
 
 ### 6. Real Code
-![Reverse-Stack-Using-Queue](C:\Users\Student\Desktop\whiteboard-Challenge\Data-Structures\Stack & Queue\StackAndQueue\ReverseStackUsingQueue\Reverse-Stack-Using-Queue.jpg)
+![Reverse-Stack-Using-Queue](https://github.com/nooralbonne/challenges-and-data-structures1/blob/Reverse-Stack-Using-Queue/Data-Structures/Stack%20%26%20Queue/StackAndQueue/ReverseStackUsingQueue/Reverse-Stack-Using-Queue.jpg)
 
 
 ### 7. Big O Time/Space Complexity
