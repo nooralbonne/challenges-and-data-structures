@@ -1,3 +1,4 @@
+using StackAndQueue.DeleteMiddleElement;
 using StackAndQueue.ReverseStackUsingQueue;
 using Xunit;
 
@@ -58,6 +59,7 @@ namespace StackAndQueueTest
             queue.Enqueue(10);
             Assert.False(queue.IsEmpty());
         }
+
         [Fact]
         public void ReverseStack_MultipleElements_ReversesCorrectly()
         {
@@ -106,6 +108,44 @@ namespace StackAndQueueTest
             // Assert
             Assert.True(stack.IsEmpty());
         }
+
+        [Fact]
+        public void DeleteMiddle_OddSizedStack_RemovesCorrectElement()
+        {
+            // Arrange
+            var stack = new StackWithDeleteMiddle<int>();
+            stack.Push(5);  
+            stack.Push(8);  
+            stack.Push(3);  
+            stack.Push(14); 
+            stack.Push(7);  
+
+            // Act
+            stack.DeleteMiddle();
+
+            // Assert
+            // Stack after removing the middle element 3:
+            // Stack: Top -> 5 -> 8 -> 14 -> 7
+            Assert.Equal("Stack: Top -> 5 -> 8 -> 14 -> 7 -> End", stack.ToString());
+        }
+
+        [Fact]
+        public void DeleteMiddle_EvenSizedStack_RemovesCorrectElement()
+        {
+            // Arrange
+            var stack = new StackWithDeleteMiddle<int>();
+            stack.Push(8);  
+            stack.Push(14); 
+            stack.Push(3);  
+            stack.Push(7);  
+
+            // Act
+            stack.DeleteMiddle();
+
+            // Assert
+            // Stack after removing the lower middle element 3:
+            // Stack: Top -> 8 -> 14 -> 7
+            Assert.Equal("Stack: Top -> 8 -> 14 -> 7 -> End", stack.ToString());
+        }
     }
 }
-
