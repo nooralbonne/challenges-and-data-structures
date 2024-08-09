@@ -1,3 +1,4 @@
+using StackAndQueue;
 using StackAndQueue.DeleteMiddleElement;
 using StackAndQueue.ReverseStackUsingQueue;
 using Xunit;
@@ -146,6 +147,55 @@ namespace StackAndQueueTest
             // Stack after removing the lower middle element 3:
             // Stack: Top -> 8 -> 14 -> 7
             Assert.Equal("Stack: Top -> 8 -> 14 -> 7 -> End", stack.ToString());
+        }
+        [Fact]
+        public void TestPushAndGetMin()
+        {
+            var minStack = new MinStack();
+            minStack.Push(10);
+            minStack.Push(5);
+            minStack.Push(20);
+
+            Assert.Equal(5, minStack.GetMin()); // Minimum should be 5
+        }
+
+        [Fact]
+        public void TestPopAndGetMin()
+        {
+            var minStack = new MinStack();
+            minStack.Push(10);
+            minStack.Push(5);
+            minStack.Push(20);
+
+            minStack.Pop();
+            Assert.Equal(5, minStack.GetMin()); // Minimum should be 5
+
+            minStack.Pop();
+            Assert.Equal(10, minStack.GetMin()); // Minimum should be 10
+        }
+
+        [Fact]
+        public void TestTop()
+        {
+            var minStack = new MinStack();
+            minStack.Push(10);
+            minStack.Push(5);
+            minStack.Push(20);
+
+            Assert.Equal(20, minStack.Top()); // Top should be 20
+        }
+
+        [Fact]
+        public void TestIsEmpty()
+        {
+            var minStack = new MinStack();
+            Assert.True(minStack.IsEmpty()); // Initially empty
+
+            minStack.Push(10);
+            Assert.False(minStack.IsEmpty()); // Not empty after push
+
+            minStack.Pop();
+            Assert.True(minStack.IsEmpty()); // Empty again after pop
         }
     }
 }
