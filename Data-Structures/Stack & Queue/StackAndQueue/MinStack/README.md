@@ -12,7 +12,7 @@ The `MinStack` class implements a stack that supports the following operations i
 
 ## Whiteboard Image
 
-![MinStack Image](path/to/whiteboard-image.png)
+![MinStack Image](https://github.com/nooralbonne/challenges-and-data-structures1/blob/Min-Stack/Data-Structures/Stack%20%26%20Queue/StackAndQueue/MinStack/MinStacks.jpg)
 
 ## Problem Domain
 
