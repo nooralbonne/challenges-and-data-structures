@@ -12,7 +12,7 @@ The `MinStack` class implements a stack that supports the following operations i
 
 ## Whiteboard Image
 
-![MinStack Image](path/to/whiteboard-image.png)
+![MinStack Image](https://github.com/nooralbonne/challenges-and-data-structures1/blob/Min-Stack/Data-Structures/Stack%20%26%20Queue/StackAndQueue/MinStack/MinStacks.jpg)
 
 ## Problem Domain
 
@@ -67,3 +67,7 @@ The visual representation of the stack and minimum tracking:
 5. **PrintStack()**
    - Iterate through the `stack` and print its elements from top to bottom.
 
+## MinStack Class Complexity
+
+- Time Complexity for Push, Pop, Top, IsEmpty, and GetMin operations is O(1).
+- Space Complexity is O(n) for Push, where n is the number of elements in the stack. For other operations, the space complexity is O(1) beyond the existing stack size.
