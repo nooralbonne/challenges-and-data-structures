@@ -4,14 +4,14 @@ This repository contains implementations of Binary Tree and Binary Search Tree i
 
 ## Whiteboard Image
 
-![Whiteboard Diagram](path/to/whiteboard-image.png)  
+![Whiteboard Diagram](https://github.com/nooralbonne/challenges-and-data-structures1/blob/master/Data-Structures/Trees/tree.jpg)  
 *(Include a path to your whiteboard image here)*
 
 ## Problem Domain
 
 The problem domain involves implementing two types of tree data structures:
 - **Binary Tree**: A tree data structure where each node has at most two children.
-- **Binary Search Tree (BST)**: A binary tree where the left child of a node contains only nodes with values less than the node’s value, and the right child contains only nodes with values greater than the node’s value.
+- **Binary Search Tree (BST)**: A binary tree where the left child of a node contains only nodes with values less than the nodeâ€™s value, and the right child contains only nodes with values greater than the nodeâ€™s value.
 
 ## Inputs and Expected Outputs
 
