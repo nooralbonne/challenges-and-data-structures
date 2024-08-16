@@ -1,6 +1,6 @@
 public class BinaryTree
 {
-    public Node Root { get; set; } // Add the public setter here
+    public Node Root { get; set; }
 
     public BinaryTree()
     {
@@ -17,13 +17,20 @@ public class BinaryTree
         }
     }
 
-    public void InOrder(Node node)
+    public List<int> InOrder(Node node)
+    {
+        List<int> result = new List<int>();
+        InOrder(node, result);
+        return result;
+    }
+
+    private void InOrder(Node node, List<int> result)
     {
         if (node != null)
         {
-            InOrder(node.Left);
-            Console.Write(node.Data + " ");
-            InOrder(node.Right);
+            InOrder(node.Left, result);
+            result.Add(node.Data);
+            InOrder(node.Right, result);
         }
     }
 
@@ -58,4 +65,26 @@ public class BinaryTree
             Print(node.Right, indent, true);
         }
     }
+
+    // Mirror the tree
+    public void Mirror(Node node)
+    {
+        try
+        {
+            if (node == null)
+                return;
+
+            Mirror(node.Left);
+            Mirror(node.Right);
+
+            Node temp = node.Left;
+            node.Left = node.Right;
+            node.Right = temp;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("An error occurred while mirroring the tree: " + ex.Message);
+        }
+    }
 }
+

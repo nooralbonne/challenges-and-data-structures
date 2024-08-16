@@ -187,6 +187,57 @@ namespace TestTreeImplementation
                 // Assert
                 Assert.Equal(expectedOutput, actualOutput);
             }
+
+            [Fact]
+            public void TestMirrorTreeInorderTraversal()
+            {
+                // Arrange
+                var binaryTree = new BinaryTree();
+                binaryTree.Root = new Node(4);
+                binaryTree.Root.Left = new Node(8);
+                binaryTree.Root.Right = new Node(7);
+                binaryTree.Root.Left.Left = new Node(12);
+                binaryTree.Root.Left.Right = new Node(9);
+
+                // Act
+                var originalInorder = binaryTree.InOrder(binaryTree.Root);
+                binaryTree.Mirror(binaryTree.Root);
+                var mirroredInorder = binaryTree.InOrder(binaryTree.Root);
+
+                // Assert
+                Assert.Equal(new List<int> { 12, 8, 9, 4, 7 }, originalInorder);
+                Assert.Equal(new List<int> { 7, 4, 9, 8, 12 }, mirroredInorder);
+            }
+
+            [Fact]
+            public void TestSingleNodeTree()
+            {
+                // Arrange
+                var binaryTree = new BinaryTree();
+                binaryTree.Root = new Node(1);
+
+                // Act
+                binaryTree.Mirror(binaryTree.Root);
+                var inorder = binaryTree.InOrder(binaryTree.Root);
+
+                // Assert
+                Assert.Equal(new List<int> { 1 }, inorder);
+            }
+
+            [Fact]
+            public void TestEmptyTree()
+            {
+                // Arrange
+                var binaryTree = new BinaryTree();
+
+                // Act
+                binaryTree.Mirror(binaryTree.Root);
+                var inorder = binaryTree.InOrder(binaryTree.Root);
+
+                // Assert
+                Assert.Empty(inorder);
+            }
         }
     }
-}
+    }
+
