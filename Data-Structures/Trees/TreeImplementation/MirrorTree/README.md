@@ -25,7 +25,7 @@ A mirror tree of a binary tree is a tree that looks exactly like the original bi
 [12, 8, 9, 4, 7]
 
 **Mirrored Binary Tree:**
-  4
+   4
  / \
 7   8
    / \
