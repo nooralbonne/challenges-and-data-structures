@@ -86,5 +86,38 @@ public class BinaryTree
             Console.WriteLine("An error occurred while mirroring the tree: " + ex.Message);
         }
     }
-}
 
+    // Find the second maximum value in the Binary Tree
+    public int FindSecondMax()
+    {
+        if (Root == null)
+        {
+            throw new InvalidOperationException("Tree is empty.");
+        }
+
+        return FindSecondMaxHelper(Root, int.MinValue, int.MinValue);
+    }
+
+    private int FindSecondMaxHelper(Node node, int max, int secondMax)
+    {
+        if (node == null)
+        {
+            return secondMax;
+        }
+
+        if (node.Data > max)
+        {
+            secondMax = max;
+            max = node.Data;
+        }
+        else if (node.Data > secondMax && node.Data < max)
+        {
+            secondMax = node.Data;
+        }
+
+        secondMax = FindSecondMaxHelper(node.Left, max, secondMax);
+        secondMax = FindSecondMaxHelper(node.Right, max, secondMax);
+
+        return secondMax;
+    }
+}
