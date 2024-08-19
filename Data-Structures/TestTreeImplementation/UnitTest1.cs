@@ -1,4 +1,6 @@
-using Microsoft.VisualStudio.TestPlatform.Utilities;
+using System.Collections.Generic;
+using Xunit;
+using Trees.TreeImplementation; // Adjust the namespace according to your project
 
 namespace TestTreeImplementation
 {
@@ -237,7 +239,89 @@ namespace TestTreeImplementation
                 // Assert
                 Assert.Empty(inorder);
             }
+
+            // New Tests for Maximum Value in Binary Tree
+
+            [Fact]
+            public void Test_FindMaxValue_InBinaryTree_ExampleTree()
+            {
+                // Arrange
+                var binaryTree = new BinaryTree();
+                binaryTree.Root = new Node(1)
+                {
+                    Left = new Node(2)
+                    {
+                        Left = new Node(4),
+                        Right = new Node(5)
+                    },
+                    Right = new Node(3)
+                };
+
+                // Act
+                int maxValue = FindMaxValue(binaryTree.Root);
+
+                // Assert
+                Assert.Equal(5, maxValue);
+            }
+
+            [Fact]
+            public void Test_FindMaxValue_InBinaryTree_FewerThanTwoUniqueValues()
+            {
+                // Arrange
+                var binaryTree = new BinaryTree();
+                binaryTree.Root = new Node(2)
+                {
+                    Left = new Node(2),
+                    Right = new Node(2)
+                };
+
+                // Act
+                int maxValue = FindMaxValue(binaryTree.Root);
+
+                // Assert
+                Assert.Equal(2, maxValue);
+            }
+
+            [Fact]
+            public void Test_FindMaxValue_InBinaryTree_NegativeValues()
+            {
+                // Arrange
+                var binaryTree = new BinaryTree();
+                binaryTree.Root = new Node(-10)
+                {
+                    Left = new Node(-20)
+                    {
+                        Left = new Node(-30),
+                        Right = new Node(-25)
+                    },
+                    Right = new Node(-15)
+                };
+
+                // Act
+                int maxValue = FindMaxValue(binaryTree.Root);
+
+                // Assert
+                Assert.Equal(-10, maxValue);
+            }
+
+            // Helper method to find the maximum value in a binary tree
+            private int FindMaxValue(Node node)
+            {
+                if (node == null)
+                    return int.MinValue;
+
+                int maxValue = node.Data;
+                int leftMax = FindMaxValue(node.Left);
+                int rightMax = FindMaxValue(node.Right);
+
+                if (leftMax > maxValue)
+                    maxValue = leftMax;
+
+                if (rightMax > maxValue)
+                    maxValue = rightMax;
+
+                return maxValue;
+            }
         }
     }
-    }
-
+}
