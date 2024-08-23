@@ -72,6 +72,12 @@
             Console.WriteLine("Mirrored InOrder Traversal:");
             List<int> mirroredInorder = mirrorTree.InOrder(mirrorTree.Root);
             Console.WriteLine(string.Join(", ", mirroredInorder));
+
+            // Calculate the sum of leaf nodes
+            int leafSum = binaryTree.LeafSum();
+            Console.WriteLine("Sum of all leaf nodes: " + leafSum); // Output: 51
+
+
         }
     }
 }
