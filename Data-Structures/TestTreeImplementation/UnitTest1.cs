@@ -322,6 +322,47 @@ namespace TestTreeImplementation
 
                 return maxValue;
             }
+            [Fact]
+            public void Test_LeafSum_WithPositiveLeafNodes()
+            {
+                // Arrange
+                var binaryTree = new BinaryTree();
+                binaryTree.Root = new Node(9);
+                binaryTree.Root.Left = new Node(8);
+                binaryTree.Root.Right = new Node(12);
+                binaryTree.Root.Left.Left = new Node(3);
+                binaryTree.Root.Left.Right = new Node(7);
+                binaryTree.Root.Right.Left = new Node(17);
+                binaryTree.Root.Right.Right = new Node(23);
+                binaryTree.Root.Left.Left.Right = new Node(4);
+
+                // Act
+                int leafSum = binaryTree.LeafSum();
+
+                // Assert
+                Assert.Equal(51, leafSum);
+            }
+
+            [Fact]
+            public void Test_LeafSum_WithNegativeLeafNodes()
+            {
+                // Arrange
+                var binaryTree = new BinaryTree();
+                binaryTree.Root = new Node(-10);
+                binaryTree.Root.Left = new Node(-20);
+                binaryTree.Root.Right = new Node(-30);
+                binaryTree.Root.Left.Left = new Node(-40);
+                binaryTree.Root.Left.Right = new Node(-50);
+                binaryTree.Root.Right.Left = new Node(-60);
+
+                // Act
+                int leafSum = binaryTree.LeafSum();
+
+                // Assert
+                Assert.Equal(-150, leafSum);
+            }
+
+
         }
     }
 }

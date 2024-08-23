@@ -120,4 +120,27 @@ public class BinaryTree
 
         return secondMax;
     }
+
+    // Method to calculate the sum of all leaf nodes
+    public int LeafSum()
+    {
+        return LeafSumHelper(Root);
+    }
+
+    private int LeafSumHelper(Node node)
+    {
+        if (node == null)
+        {
+            return 0;
+        }
+
+        // Check if the node is a leaf node
+        if (node.Left == null && node.Right == null)
+        {
+            return node.Data;
+        }
+
+        // Recursively sum the leaves in the left and right subtrees
+        return LeafSumHelper(node.Left) + LeafSumHelper(node.Right);
+    }
 }
