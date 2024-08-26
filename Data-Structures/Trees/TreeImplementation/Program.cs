@@ -78,6 +78,10 @@
             Console.WriteLine("Sum of all leaf nodes: " + leafSum); // Output: 51
 
 
+            // Find the largest value at each level
+            List<int> largestValues = binaryTree.LargestValueEachLevel();
+            Console.WriteLine("Largest values at each level: " + string.Join(", ", largestValues));
+            // Expected output: [5, 13, 20, 11]
         }
     }
 }
