@@ -362,7 +362,45 @@ namespace TestTreeImplementation
                 Assert.Equal(-150, leafSum);
             }
 
+            [Fact]
+            public void LargestValueEachLevel_ShouldReturnCorrectValues()
+            {
+                var binaryTree = new BinaryTree();
+                binaryTree.Root = new Node(5)
+                {
+                    Left = new Node(13)
+                    {
+                        Left = new Node(3)
+                        {
+                            Left = new Node(1),
+                            Right = new Node(4)
+                        },
+                        Right = new Node(7)
+                    },
+                    Right = new Node(7)
+                    {
+                        Left = new Node(12)
+                        {
+                            Right = new Node(11)
+                        },
+                        Right = new Node(20)
+                    }
+                };
 
-        }
+                var result = binaryTree.LargestValueEachLevel();
+                var expected = new List<int> { 5, 13, 20, 11 };
+
+                Assert.Equal(expected, result);
+            }
+
+            [Fact]
+            public void LargestValueEachLevel_ShouldHandleEmptyTree()
+            {
+                var binaryTree = new BinaryTree();
+                var result = binaryTree.LargestValueEachLevel();
+                Assert.Empty(result);
+            }
+        
+    }
     }
 }
