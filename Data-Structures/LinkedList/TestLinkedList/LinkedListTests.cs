@@ -1,6 +1,7 @@
 using Xunit;
 using System;
 using System.IO;
+using System.Collections.Generic;
 
 namespace LinkedList.Tests
 {
@@ -150,6 +151,39 @@ namespace LinkedList.Tests
             Assert.Equal(10, mergedList.head.Next.Next.Next.Data);
             Assert.Equal(15, mergedList.head.Next.Next.Next.Next.Data);
             Assert.Equal(20, mergedList.head.Next.Next.Next.Next.Next.Data);
+        }
+
+        [Fact]
+        public void RotateLeft_Zero_ShouldRemainUnchanged()
+        {
+            // Arrange
+            LinkedList list = new LinkedList();
+            list.Add(1);
+            list.Add(2);
+            list.Add(3);
+
+            // Act
+            list.RotateLeft(0);
+
+            // Assert
+            Assert.Equal("1 -> 2 -> 3 -> Null", list.ToString());
+        }
+
+        [Fact]
+        public void RotateLeft_ValueGreaterThanLength_ShouldWrapAround()
+        {
+            // Arrange
+            LinkedList list = new LinkedList();
+            list.Add(1);
+            list.Add(2);
+            list.Add(3);
+            list.Add(4);
+
+            // Act
+            list.RotateLeft(7); // Length is 4, so 7 % 4 = 3
+
+            // Assert
+            Assert.Equal("4 -> 1 -> 2 -> 3 -> Null", list.ToString());
         }
     }
 }
