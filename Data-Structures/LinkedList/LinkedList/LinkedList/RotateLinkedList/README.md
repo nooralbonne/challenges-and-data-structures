@@ -26,7 +26,7 @@ Given a singly linked list and an integer `k`, rotate the linked list to the lef
 - An empty linked list should not throw an error and should remain unchanged.
 
 ## Visual
-![ Code]()
+![ Code](https://github.com/nooralbonne/challenges-and-data-structures/blob/Linked-List-Rotate-K/Data-Structures/LinkedList/LinkedList/LinkedList/RotateLinkedList/LinkedListRotation.jpg)
 
 ## Algorithm
 1. **Calculate Length**: Traverse the linked list to determine its length.
