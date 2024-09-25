@@ -93,6 +93,47 @@ namespace LinkedList
             return result.ToString();
         }
 
+        // Method to rotate the linked list to the left by k positions
+        public void RotateLeft(int k)
+        {
+            if (head == null || k == 0)
+            {
+                return; // No rotation needed
+            }
+
+            // Get the length of the linked list
+            int length = GetLength();
+            k = k % length; // In case k is larger than the length of the list
+            if (k == 0) return; // No need to rotate if k is 0 or a multiple of length
+
+            // Find the kth node and its previous node
+            Node current = head;
+            int count = 1;
+            while (count < k && current != null)
+            {
+                current = current.Next;
+                count++;
+            }
+
+            // The kth node becomes the new head
+            Node kthNode = current;
+
+            // Traverse to the end of the list
+            while (current.Next != null)
+            {
+                current = current.Next;
+            }
+
+            // Connect the end of the list to the original head
+            current.Next = head;
+
+            // The new head becomes the (k+1)th node
+            head = kthNode.Next;
+
+            // Set the kth node's next to null to mark the end of the new list
+            kthNode.Next = null;
+        }
+
         public int GetLength()
         {
             int length = 0;
