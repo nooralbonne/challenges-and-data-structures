@@ -4,8 +4,10 @@ using Trees.TreeImplementation; // Adjust the namespace according to your projec
 
 namespace TestTreeImplementation
 {
+
     public class UnitTest1
     {
+
         public class BinarySearchTreeTests
         {
             [Fact]
@@ -400,7 +402,78 @@ namespace TestTreeImplementation
                 var result = binaryTree.LargestValueEachLevel();
                 Assert.Empty(result);
             }
-        
-    }
+
+            public class RightViewTest
+            {
+                [Fact]
+                public void TestRightView_CorrectOutput()
+                {
+                    // Arrange
+                    BinaryTree tree = new BinaryTree();
+                    tree.Root = new Node(2);
+                    tree.Root.Left = new Node(3);
+                    tree.Root.Right = new Node(5);
+                    tree.Root.Left.Left = new Node(4);
+                    tree.Root.Right.Right = new Node(6);
+                    tree.Root.Left.Left.Right = new Node(7);
+
+                    // Act & Assert
+                    using (var sw = new StringWriter())
+                    {
+                        Console.SetOut(sw);
+                        tree.PrintRightView();
+
+                        var expected = string.Join(" ", new int[] { 2, 5, 6, 7 }) + Environment.NewLine;
+                        Assert.Equal(expected, sw.ToString());
+                    }
+                }
+
+                [Fact]
+                public void TestRightView_AllRightNodes()
+                {
+                    // Arrange
+                    BinaryTree tree = new BinaryTree();
+                    tree.Root = new Node(1);
+                    tree.Root.Right = new Node(2);
+                    tree.Root.Right.Right = new Node(3);
+                    tree.Root.Right.Right.Right = new Node(4);
+
+                    // Act & Assert
+                    using (var sw = new StringWriter())
+                    {
+                        Console.SetOut(sw);
+                        tree.PrintRightView();
+
+                        var expected = string.Join(" ", new int[] { 1, 2, 3, 4 }) + Environment.NewLine;
+                        Assert.Equal(expected, sw.ToString());
+                    }
+                }
+
+                private string GetConsoleOutput(Action action)
+                {
+                    using (var consoleOutput = new StringWriter())
+                    {
+                        Console.SetOut(consoleOutput);
+                        action();
+                        return consoleOutput.ToString();
+                    }
+                }
+
+                [Fact]
+                public void TestRightView_EmptyTree()
+                {
+                    // Arrange
+                    BinaryTree emptyTree = new BinaryTree();
+
+                    // Act and Assert
+                    var output = GetConsoleOutput(() => emptyTree.PrintRightView());
+                    Assert.Equal("Tree is empty.\r\n", output);
+                }
+
+         
+        }
+        }
     }
 }
+    
+

@@ -82,6 +82,20 @@
             List<int> largestValues = binaryTree.LargestValueEachLevel();
             Console.WriteLine("Largest values at each level: " + string.Join(", ", largestValues));
             // Expected output: [5, 13, 20, 11]
+
+
+            // Example Binary Tree setup
+            BinaryTree Btree = new BinaryTree();
+            Btree.Root = new Node(2);
+            Btree.Root.Left = new Node(3);
+            Btree.Root.Right = new Node(5);
+            Btree.Root.Left.Left = new Node(4);
+            Btree.Root.Right.Right = new Node(6);
+            Btree.Root.Left.Left.Right = new Node(7);
+
+            // Print the right view of the binary tree
+            Console.WriteLine("Right view of the binary tree:");
+            Btree.PrintRightView();  // Expected Output: 2 5 6 7
         }
     }
 }

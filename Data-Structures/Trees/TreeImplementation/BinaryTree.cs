@@ -178,4 +178,46 @@ public class BinaryTree
         return largestValues;
     }
 
+    // Method to print the right view of the binary tree
+    public void PrintRightView()
+    {
+        if (Root == null)
+        {
+            Console.WriteLine("Tree is empty.");
+            return;
+        }
+
+        Queue<Node> queue = new Queue<Node>();
+        queue.Enqueue(Root);
+
+        while (queue.Count > 0)
+        {
+            int levelSize = queue.Count;
+            Node rightMostNode = null;
+
+            for (int i = 0; i < levelSize; i++)
+            {
+                Node current = queue.Dequeue();
+                rightMostNode = current;
+
+                if (current.Left != null)
+                    queue.Enqueue(current.Left);
+                if (current.Right != null)
+                    queue.Enqueue(current.Right);
+            }
+
+            if (rightMostNode != null)
+            {
+                if (queue.Count == 0)
+                    Console.Write(rightMostNode.Data);
+                else
+                    Console.Write(rightMostNode.Data + " ");
+            }
+        }
+        Console.WriteLine(); // Ensure the output ends with a newline.
+    }
+
+
+
+
 }
