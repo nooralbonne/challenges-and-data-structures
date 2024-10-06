@@ -142,9 +142,6 @@ public class BinaryTree
 
         // Recursively sum the leaves in the left and right subtrees
         return LeafSumHelper(node.Left) + LeafSumHelper(node.Right);
-    
-    
-    
     }
 
     public List<int> LargestValueEachLevel()
@@ -178,4 +175,49 @@ public class BinaryTree
         return largestValues;
     }
 
+    // Method to find the level with the maximum number of nodes
+    public int FindMaxLevelNodes()
+    {
+        if (Root == null)
+        {
+            throw new InvalidOperationException("Tree is empty.");
+        }
+
+        Queue<Node> queue = new Queue<Node>();
+        queue.Enqueue(Root);
+
+        int maxLevel = 0;
+        int maxNodes = 0;
+        int currentLevel = 0;
+
+        while (queue.Count > 0)
+        {
+            int levelSize = queue.Count; // Number of nodes at the current level
+
+            if (levelSize > maxNodes)
+            {
+                maxNodes = levelSize;
+                maxLevel = currentLevel;
+            }
+
+            for (int i = 0; i < levelSize; i++)
+            {
+                Node currentNode = queue.Dequeue();
+
+                if (currentNode.Left != null)
+                {
+                    queue.Enqueue(currentNode.Left);
+                }
+
+                if (currentNode.Right != null)
+                {
+                    queue.Enqueue(currentNode.Right);
+                }
+            }
+
+            currentLevel++; // Move to the next level
+        }
+
+        return maxLevel;
+    }
 }

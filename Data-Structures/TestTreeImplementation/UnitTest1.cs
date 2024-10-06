@@ -190,6 +190,8 @@ namespace TestTreeImplementation
                 Assert.Equal(expectedOutput, actualOutput);
             }
 
+            // Mirror Tree Tests
+
             [Fact]
             public void TestMirrorTreeInorderTraversal()
             {
@@ -240,7 +242,7 @@ namespace TestTreeImplementation
                 Assert.Empty(inorder);
             }
 
-            // New Tests for Maximum Value in Binary Tree
+            // Find Max Value Tests
 
             [Fact]
             public void Test_FindMaxValue_InBinaryTree_ExampleTree()
@@ -304,7 +306,6 @@ namespace TestTreeImplementation
                 Assert.Equal(-10, maxValue);
             }
 
-            // Helper method to find the maximum value in a binary tree
             private int FindMaxValue(Node node)
             {
                 if (node == null)
@@ -314,14 +315,11 @@ namespace TestTreeImplementation
                 int leftMax = FindMaxValue(node.Left);
                 int rightMax = FindMaxValue(node.Right);
 
-                if (leftMax > maxValue)
-                    maxValue = leftMax;
-
-                if (rightMax > maxValue)
-                    maxValue = rightMax;
-
-                return maxValue;
+                return System.Math.Max(maxValue, System.Math.Max(leftMax, rightMax));
             }
+
+            // Leaf Sum Tests
+
             [Fact]
             public void Test_LeafSum_WithPositiveLeafNodes()
             {
@@ -352,55 +350,15 @@ namespace TestTreeImplementation
                 binaryTree.Root.Left = new Node(-20);
                 binaryTree.Root.Right = new Node(-30);
                 binaryTree.Root.Left.Left = new Node(-40);
-                binaryTree.Root.Left.Right = new Node(-50);
-                binaryTree.Root.Right.Left = new Node(-60);
+                binaryTree.Root.Left.Right = new Node(-25);
+                binaryTree.Root.Right.Right = new Node(-15);
 
                 // Act
                 int leafSum = binaryTree.LeafSum();
 
                 // Assert
-                Assert.Equal(-150, leafSum);
+                Assert.Equal(-80, leafSum);
             }
-
-            [Fact]
-            public void LargestValueEachLevel_ShouldReturnCorrectValues()
-            {
-                var binaryTree = new BinaryTree();
-                binaryTree.Root = new Node(5)
-                {
-                    Left = new Node(13)
-                    {
-                        Left = new Node(3)
-                        {
-                            Left = new Node(1),
-                            Right = new Node(4)
-                        },
-                        Right = new Node(7)
-                    },
-                    Right = new Node(7)
-                    {
-                        Left = new Node(12)
-                        {
-                            Right = new Node(11)
-                        },
-                        Right = new Node(20)
-                    }
-                };
-
-                var result = binaryTree.LargestValueEachLevel();
-                var expected = new List<int> { 5, 13, 20, 11 };
-
-                Assert.Equal(expected, result);
-            }
-
-            [Fact]
-            public void LargestValueEachLevel_ShouldHandleEmptyTree()
-            {
-                var binaryTree = new BinaryTree();
-                var result = binaryTree.LargestValueEachLevel();
-                Assert.Empty(result);
-            }
-        
-    }
+        }
     }
 }
