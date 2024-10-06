@@ -33,7 +33,8 @@ Here’s a visual representation of a sample binary tree:
 - **FindSecondMax:** Traverse the tree to find the maximum, then remove it and find the next largest value.
 
 ## Real Code
-Refer to the implementation in the `BinaryTree.cs`, `LevelMaxNodeTest.cs`, `LeafSumTest.cs`, and `SecondMaxTest.cs`.
+![Max Level Nodes](https://github.com/nooralbonne/challenges-and-data-structures/blob/Max-Level-Nodes/Data-Structures/Trees/TreeImplementation/MaxLevelNodes/maxNumberOfNodes.jpg)
+
 
 ## Big O Time/Space Complexity
 - **Time Complexity:**
