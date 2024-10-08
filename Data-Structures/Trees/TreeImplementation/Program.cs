@@ -92,6 +92,29 @@
 
             int maxLevel = Btree.FindMaxLevelNodes();
             Console.WriteLine("The level with the maximum number of nodes is: " + maxLevel);
-        }
+
+            //=========================================
+            // First example
+            BinaryTree Btree1 = new BinaryTree();
+            Btree1.Root = new Node(1);
+            Btree1.Root.Left = new Node(2);
+            Btree1.Root.Right = new Node(3);
+            Btree1.Root.Left.Left = new Node(4);
+            Btree1.Root.Left.Right = new Node(5);
+
+            Console.WriteLine("Minimum depth of the first tree: " + Btree1.FindMinimumDepth()); // Output: 2
+
+
+            // Second example
+            BinaryTree Btree2 = new BinaryTree();
+            Btree2.Root = new Node(1);
+            Btree2.Root.Left = new Node(2);
+            Btree2.Root.Right = new Node(3);
+            Btree2.Root.Left.Right = new Node(5);
+            Btree2.Root.Right.Right = new Node(6);
+
+            Console.WriteLine("Minimum depth of the second tree: " + Btree2.FindMinimumDepth()); // Output: 3
+        
+       }
     }
 }
