@@ -220,4 +220,40 @@ public class BinaryTree
 
         return maxLevel;
     }
+
+    // Method to find the minimum depth of the binary tree
+    public int FindMinimumDepth()
+    {
+        if (Root == null)
+        {
+            return 0; // An empty tree has a depth of 0
+        }
+
+        return FindMinimumDepthHelper(Root);
+    }
+
+    // Helper method using recursion to find the minimum depth
+    private int FindMinimumDepthHelper(Node node)
+    {
+        // Base case: if the node is null, return a large number (infinity)
+        if (node == null)
+        {
+            return int.MaxValue;
+        }
+
+        // If it's a leaf node, return 1
+        if (node.Left == null && node.Right == null)
+        {
+            return 1;
+        }
+
+        // Recur for the left and right subtrees and take the minimum depth
+        int leftDepth = FindMinimumDepthHelper(node.Left);
+        int rightDepth = FindMinimumDepthHelper(node.Right);
+
+        // Return the minimum depth of the subtrees + 1 (for the current node)
+        return Math.Min(leftDepth, rightDepth) + 1;
+    }
+
+
 }
