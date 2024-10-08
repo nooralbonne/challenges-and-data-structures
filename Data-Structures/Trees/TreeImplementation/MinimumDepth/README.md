@@ -40,7 +40,7 @@ Expected Output: `3` (Both left and right subtrees have a depth of 3)
 
 ## Visual
 
-![Tree Diagram](https://github.com/nooralbonne/challenges-and-data-structures/blob/Max-Level-Nodes/Data-Structures/Trees/TreeImplementation/MaxLevelNodes/maxNumberOfNodes.jpg)
+![Tree Diagram](https://github.com/nooralbonne/challenges-and-data-structures/blob/Minimum-Depth/Data-Structures/Trees/TreeImplementation/MinimumDepth/minimum-depth.jpg)
 
 ## Algorithm
 1. **Base case**: If the root is `null`, the tree is empty, return `0`.
