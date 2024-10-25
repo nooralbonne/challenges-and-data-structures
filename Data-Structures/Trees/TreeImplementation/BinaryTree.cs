@@ -217,6 +217,37 @@ public class BinaryTree
         Console.WriteLine(); // Ensure the output ends with a newline.
     }
 
+    private Node BstUtil(List<int> values, int start, int end)
+    {
+        if (start > end) return null;
+
+        int mid = (start + end) / 2;
+        Node root = new Node(values[mid]);
+        root.Left = BstUtil(values, start, mid - 1);
+        root.Right = BstUtil(values, mid + 1, end);
+
+        return root;
+    }
+
+    private void Inorder(Node root, List<int> values)
+    {
+        if (root == null) return;
+
+        Inorder(root.Left, values);
+        values.Add(root.Data);
+        Inorder(root.Right, values);
+    }
+
+    public Node BinaryTreeToBST(Node root)
+    {
+        if (root == null) return null;
+
+        List<int> values = new List<int>();
+        Inorder(root, values);
+        values.Sort();
+
+        return BstUtil(values, 0, values.Count - 1);
+    }
 
 
 

@@ -96,6 +96,15 @@
             // Print the right view of the binary tree
             Console.WriteLine("Right view of the binary tree:");
             Btree.PrintRightView();  // Expected Output: 2 5 6 7
+                                     // Convert binaryTree to a binary search tree and print the result
+            Console.WriteLine("\nConverting Binary Tree to Binary Search Tree...");
+            Node bstRoot = binaryTree.BinaryTreeToBST(binaryTree.Root);
+
+            Console.WriteLine("InOrder Traversal of the Converted BST:");
+            var bstInOrder = binaryTree.InOrder(bstRoot);
+            Console.WriteLine(string.Join(", ", bstInOrder));
+
+
         }
     }
 }
