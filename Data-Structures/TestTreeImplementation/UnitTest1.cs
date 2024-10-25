@@ -470,9 +470,96 @@ namespace TestTreeImplementation
                     Assert.Equal("Tree is empty.\r\n", output);
                 }
 
-         
+                [Fact]
+                public void BinaryTreeToBST_ConvertsTreeCorrectly()
+                {
+                    // Arrange
+                    var binaryTree = new BinaryTree();
+                    binaryTree.Root = new Node(10)
+                    {
+                        Left = new Node(5)
+                        {
+                            Left = new Node(3),
+                            Right = new Node(7)
+                        },
+                        Right = new Node(20)
+                        {
+                            Left = new Node(15),
+                            Right = new Node(25)
+                        }
+                    };
+
+                    // Act
+                    Node bstRoot = binaryTree.BinaryTreeToBST(binaryTree.Root);
+
+                    // InOrder traversal of BST should be sorted
+                    List<int> bstInOrder = binaryTree.InOrder(bstRoot);
+
+                    // Assert
+                    Assert.Equal(new List<int> { 3, 5, 7, 10, 15, 20, 25 }, bstInOrder);
+                }
+
+                [Fact]
+                public void BinaryTreeToBST_LeftSkewedTree()
+                {
+                    // Arrange
+                    var binaryTree = new BinaryTree();
+                    binaryTree.Root = new Node(5)
+                    {
+                        Left = new Node(4)
+                        {
+                            Left = new Node(3)
+                            {
+                                Left = new Node(2)
+                                {
+                                    Left = new Node(1)
+                                }
+                            }
+                        }
+                    };
+
+                    // Act
+                    Node bstRoot = binaryTree.BinaryTreeToBST(binaryTree.Root);
+
+                    // InOrder traversal of BST should be sorted
+                    List<int> bstInOrder = binaryTree.InOrder(bstRoot);
+
+                    // Assert
+                    Assert.Equal(new List<int> { 1, 2, 3, 4, 5 }, bstInOrder);
+                }
+
+                [Fact]
+                public void BinaryTreeToBST_RightSkewedTree()
+                {
+                    // Arrange
+                    var binaryTree = new BinaryTree();
+                    binaryTree.Root = new Node(1)
+                    {
+                        Right = new Node(2)
+                        {
+                            Right = new Node(3)
+                            {
+                                Right = new Node(4)
+                                {
+                                    Right = new Node(5)
+                                }
+                            }
+                        }
+                    };
+
+                    // Act
+                    Node bstRoot = binaryTree.BinaryTreeToBST(binaryTree.Root);
+
+                    // InOrder traversal of BST should be sorted
+                    List<int> bstInOrder = binaryTree.InOrder(bstRoot);
+
+                    // Assert
+                    Assert.Equal(new List<int> { 1, 2, 3, 4, 5 }, bstInOrder);
+                }
+            }
+
         }
-        }
+
     }
 }
     
